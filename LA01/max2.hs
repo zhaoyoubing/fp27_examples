@@ -10,7 +10,7 @@ max3 a b
 
 main :: IO()
 main = do
-    putStrLn "max2 2 3"
+    putStr "max2 2 3 = "
     print (max2 2 3)
-    putStrLn "max3 2 3"
+    putStr "max3 2 3 = "
     print $ max2 2 3
