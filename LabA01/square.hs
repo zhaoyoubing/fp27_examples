@@ -1,5 +1,5 @@
 -- square.hs
-module Square where
+module Main where
 
 square :: Int -> Int
 square x = x * x
