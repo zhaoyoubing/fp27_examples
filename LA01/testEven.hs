@@ -6,3 +6,5 @@ main :: IO()
 main = do
     putStrLn "Test if 4 is even"
     print (isEven 4)
+    putStr "Test if 5 is even : "
+    print $ isEven 5
