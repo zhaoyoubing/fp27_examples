@@ -1,12 +1,14 @@
--- LA02/calc_avg.hs
+-- LA02/calc_avg_let.hs
 calcAverage :: Int -> Int -> Double
 calcAverage a b = 
-    ( fromIntegral a + (fromIntegral b) ) / 2.0
+    let totalSum = a + b
+    in fromIntegral totalSum / fromIntegral 2
 
 main :: IO ()
 main = do
+    let avg = calcAverage 15 20
     putStrLn "The average score is:"
-    print $ calcAverage 15 20
+    print avg  -- Will output: 17.5
 
 {-
 Running Instructions:
