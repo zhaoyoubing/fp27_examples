@@ -1,3 +1,5 @@
+module Main where
+    
 totalPrice :: Bool -> Double -> Double
 totalPrice isVIP price = price * (if isVIP then 0.8 else 1.0)
 

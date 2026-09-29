@@ -1,4 +1,6 @@
 -- LA02/add_int2float.hs
+module Main where
+    
 add_int2float :: (Integral a, Floating b) => a -> a -> b
 add_int2float m n = fromIntegral(m) + fromIntegral(n)
 

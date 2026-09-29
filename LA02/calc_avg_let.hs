@@ -1,4 +1,6 @@
 -- LA02/calc_avg_let.hs
+module Main where
+    
 calcAverage :: Int -> Int -> Double
 calcAverage a b = 
     let totalSum = a + b

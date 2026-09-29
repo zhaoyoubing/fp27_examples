@@ -1,5 +1,6 @@
 -- LA02/check_sign.hs
-
+module Main where
+    
 checkSign :: (Num a, Ord a) => a -> String
 checkSign e = if e > 0 then "Positive" 
                        else if e < 0 then "Negative" 

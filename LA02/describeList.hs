@@ -1,3 +1,5 @@
+module Main where
+    
 describeList :: [a] -> String
 describeList xs = "The list is " ++ case xs of
     [] -> "empty."

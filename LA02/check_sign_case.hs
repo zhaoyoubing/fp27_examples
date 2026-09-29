@@ -1,3 +1,5 @@
+module Main where
+    
 checkSignC :: (Num a, Ord a) => a -> String
 checkSignC e = case e of
     n | n > 0     -> "Positive"

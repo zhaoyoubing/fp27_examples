@@ -1,4 +1,6 @@
 -- LA02/calc_avg.hs
+module Main where
+    
 calcAverage :: Int -> Int -> Double
 calcAverage a b = 
     ( fromIntegral a + (fromIntegral b) ) / 2.0

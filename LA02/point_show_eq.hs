@@ -1,4 +1,6 @@
 -- LA02/point_show_eq.hs
+module Main where
+    
 data Point = Point Double Double 
                    deriving (Show, Eq)
 

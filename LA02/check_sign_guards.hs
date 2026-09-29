@@ -1,5 +1,6 @@
 -- LA02/check_sign_guards.hs
-
+module Main where
+    
 checkSignG :: (Num a, Ord a) => a -> String
 checkSignG e 
     | e > 0 = "Positive"
