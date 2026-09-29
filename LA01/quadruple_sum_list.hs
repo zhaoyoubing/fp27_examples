@@ -3,6 +3,8 @@
 -- ghc quadruple_sum_list.hs
 -- ./quadruple_sum_list.exe
 
+module Main where
+    
 lst = [1, 2, 3, 4, 5]
 
 tot = sum (map (4*) lst)

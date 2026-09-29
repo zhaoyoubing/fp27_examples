@@ -1,4 +1,6 @@
 -- let ... in ... for value binding in expressions
+module Main where
+    
 area_let = 
     let pi = 3.1415925
         r = 2.0

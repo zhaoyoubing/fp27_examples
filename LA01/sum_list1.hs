@@ -2,7 +2,8 @@
 -- use following commands to compile and run on Windows
 -- ghc sum_list1.hs
 -- ./sum_list1.exe
-
+module Main where
+    
 sum_list :: [Int] -> Int
 sum_list [] = 0
 -- x and xs are the head and reminader of a list

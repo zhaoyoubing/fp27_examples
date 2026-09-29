@@ -1,5 +1,6 @@
 -- qsort.hs
-
+module Main where
+    
 quicksort :: [Int] -> [Int] 
 quicksort [] = []
 quicksort (x:xs) = quicksort [e | e <- xs, e < x]

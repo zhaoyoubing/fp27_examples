@@ -1,3 +1,5 @@
+module Main where
+
 -- matching constant
 lucky :: Int -> String
 lucky 7 = "LUCKY SEVEN!"

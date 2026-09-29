@@ -1,4 +1,6 @@
 -- testEven.hs
+module Main where
+    
 isEven :: Int -> Bool
 isEven x = mod x 2 == 0
 
