@@ -30,6 +30,9 @@ processStr (':':rest) = "Other commands: " ++ rest
 processStr ""         = "Empty string."
 processStr other      = "Other string: " ++ other
 
+
+
+
 main:: IO ()
 main = do
     print $ head' [1, 2, 3]

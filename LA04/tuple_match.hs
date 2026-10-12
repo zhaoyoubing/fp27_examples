@@ -7,8 +7,8 @@ first (x, _, _) = x
 second :: (a, b, c) -> b
 second (_, y, _) = y
 
-vecAdd :: (Num a) => (a, a) -> (a, a) -> (a, a)
-vecAdd (x1, y1) (x2, y2) = (x1 + x2, y1 + y2)
+vec2Add :: (Num a) => (a, a) -> (a, a) -> (a, a)
+vec2Add (x1, y1) (x2, y2) = (x1 + x2, y1 + y2)
 
 main :: IO ()
 main = do
@@ -18,4 +18,4 @@ main = do
 
     let vec1 = (1, 2)
     let vec2 = (3, 4)
-    print (vecAdd vec1 vec2)
+    print (vec2Add vec1 vec2)
