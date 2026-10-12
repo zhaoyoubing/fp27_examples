@@ -23,4 +23,6 @@ main = do
 
     print $ map second $ filter_salary' salary_list
 
+    print $ map (\(_, name, _) -> name) salary_list
+
 
