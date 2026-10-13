@@ -25,7 +25,7 @@ countHotDays :: [Double] -> Int
 countHotDays temps 
       | [] <- temps =  0
       | (t:ts) <- temps, t > 30.0 = 1 + countHotDays ts
-      | (t:ts) <- temps = countHotDays ts      -- Skip this day and process the rest
+      | otherwise = countHotDays (tail temps)      -- Skip this day and process the rest
 
 main :: IO ()
 main = do  
