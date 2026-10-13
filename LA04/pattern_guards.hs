@@ -14,6 +14,19 @@ processStr' xs
             | ""         <- xs = "Empty string."
             | otherwise  = "Other string: " ++ xs
 
+
+processList :: [Int] -> String
+processList lst 
+    | (x:y:_) <- lst, x == y = "Starts with two equal numbers"
+    | otherwise              = "Something else"
+
+-- using pattern guards avoids the need for case...of
+countHotDays :: [Double] -> Int
+countHotDays temps 
+      | [] <- temps =  0
+      | (t:ts) <- temps, t > 30.0 = 1 + countHotDays ts
+      | (t:ts) <- temps = countHotDays ts      -- Skip this day and process the rest
+
 main :: IO ()
 main = do  
     print $ analyzePoint (0, 0)
@@ -25,3 +38,8 @@ main = do
     print $ processStr' ":help"
     print $ processStr' ""
     print $ processStr' "x = 1"
+
+    print $ processList [1, 1, 2, 3]
+    print $ processList [1, 2, 3]   
+
+    print $ countHotDays [31.0, 29.0, 32.0, 28.0, 30.0]
