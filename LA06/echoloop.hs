@@ -1,3 +1,5 @@
+module Main where
+  
 echoLoop :: IO ()
 echoLoop = do
   putStrLn "Type something (type 'quit' to exit): "
@@ -7,6 +9,7 @@ echoLoop = do
     else do
       putStrLn ("You typed: " ++ input)
       echoLoop                       -- Recursive step for looping
+
 
 main :: IO()
 main = do

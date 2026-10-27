@@ -1,6 +1,10 @@
 main :: IO ()
 main = do
-  let actions = [putStrLn "One", putStrLn "Two", putStrLn "Three"]
-  sequence actions                    -- Runs them all in order
+  let actions = [putStrLn "One", 
+        putStrLn "Two", putStrLn "Three"]
   
-  mapM_ putStrLn ["Apple", "Banana"]   -- Maps and prints each string
+  -- Runs them all in order
+  sequence actions                    
+  
+  -- Maps and prints each string
+  mapM_ putStrLn ["Apple", "Banana"]   
