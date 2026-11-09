@@ -29,3 +29,4 @@ main = do
     print $ sortBy (comparing age) people
     print $ sortBy (compare `on` age) people
     print $ sortBy (flip compare `on` age) people
+    print $ sortBy (flip (comparing age)) people
