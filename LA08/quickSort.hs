@@ -1,0 +1,30 @@
+module Main where
+
+{--
+quicksort :: [Int] -> [Int] 
+quicksort [] = []
+quicksort (x:xs) = quicksort [e | e <- xs, e < x]
+                    ++ [x] 
+                    ++ quicksort [e | e <- xs, e >= x] 
+--}
+
+quicksort :: [Int] -> [Int]
+quicksort []     = []
+quicksort (x:xs) = quicksort (less x xs)
+                ++ equal x (x:xs)
+                ++ quicksort (more x xs)
+
+less :: Int -> [Int] -> [Int]
+less pivot xs = filter (\x -> x < pivot) xs
+
+more :: Int -> [Int] -> [Int]
+more pivot xs = filter (\x -> x > pivot) xs
+
+equal :: Int -> [Int] -> [Int]
+equal pivot xs = filter (\x -> x == pivot) xs
+
+main :: IO ()
+main = do
+    let unsortedList = [3, 6, 2, 8, 5, 1, 4, 7]
+    let sortedList = quicksort unsortedList
+    print sortedList
