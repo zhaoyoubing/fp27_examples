@@ -23,6 +23,15 @@ more pivot xs = filter (\x -> x > pivot) xs
 equal :: Int -> [Int] -> [Int]
 equal pivot xs = filter (\x -> x == pivot) xs
 
+{--
+-- recursive implementation
+equal :: Int -> [Int] -> [Int]
+equal _ [] = []
+equal pivot (y:ys)
+    | y == pivot = y : equal pivot ys
+    | otherwise = equal pivot ys
+--}
+
 main :: IO ()
 main = do
     let unsortedList = [3, 6, 2, 8, 5, 1, 4, 7]
