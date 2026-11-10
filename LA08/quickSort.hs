@@ -11,7 +11,7 @@ quicksort (x:xs) = quicksort [e | e <- xs, e < x]
 quicksort :: [Int] -> [Int]
 quicksort []     = []
 quicksort (p:ps) = quicksort (less p ps)
-                ++ equal p (p:ps)
+                ++ equal p (p:ps)       -- all elems equal to p, including p
                 ++ quicksort (more p ps)
 
 less :: Int -> [Int] -> [Int]
