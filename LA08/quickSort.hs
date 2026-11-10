@@ -10,9 +10,9 @@ quicksort (x:xs) = quicksort [e | e <- xs, e < x]
 
 quicksort :: [Int] -> [Int]
 quicksort []     = []
-quicksort (x:xs) = quicksort (less x xs)
-                ++ equal x (x:xs)
-                ++ quicksort (more x xs)
+quicksort (p:ps) = quicksort (less p ps)
+                ++ equal p (p:ps)
+                ++ quicksort (more p ps)
 
 less :: Int -> [Int] -> [Int]
 less pivot xs = filter (\x -> x < pivot) xs
