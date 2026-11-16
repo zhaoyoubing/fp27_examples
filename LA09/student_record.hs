@@ -9,9 +9,10 @@ data Student = Student
 s1 = Student 101 "Alice" 75.5
 
 s2 = Student
-    { sid = 102,
+    { 
       name = "Bob",
-      mark = 82.0
+      mark = 82.0,
+      sid = 102
     }
 
 summariseStudent :: Student -> String
@@ -32,7 +33,7 @@ main = do
     print s1
     print $ name s2
     print $ mark s2
-    let s3 = s3 {mark = 85.0}
+    let s3 = s2 {mark = 85.0}
     print s3
     print $ summariseStudent s2
     print $ summariseStudent' s2
